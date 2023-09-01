@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/93beaba2ba.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  *,
+  *:before,
+  *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background-color: #FFDAE9;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 65px;
+    background: #F2D1CE;
+    box-shadow: 0 5px 10px #BDA2A4;
+  }
+
+  .nav-title {
+    font-size: 1.75rem;
+    color: #FFFFFF;
+    font-weight: 900;
+  }
+
+  main {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .banner {
+    margin-top: 1rem;
+    position: relative;
+  }
+
+  .banner .background {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 10px 5px 10px #BDA2A4;
+  }
+
+  .banner .avatar {
+    width: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 0.5rem solid #F2F2F2;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 10px #BDA2A4;
+  }
+
+  .letter {
+    margin-top: 8.5rem;
+    margin-bottom: 2rem;
+    background-color: #F2F2F2;
+    padding: 4.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px #BDA2A4;
+  }
+
+  .letter p {
+    font-size: 1.5rem;
+    color: #595959;
+  }
+
+  .card-group ul {
+    padding: 0;
+    margin: 3rem 0;
+  }
+
+  .card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #BDA2A4;
+    margin: 0.5rem 0;
+  }
+
+  .card img {
+    width: 20%;
+    height: 20%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin: 0.5rem;
+    border-radius: 20px;
+    border: 2px solid #E24D7B;
+  }
+
+  .card div {
+    width: 100%;
+    margin: 0 0.5rem;
+  }
+
+  .card div .name {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-bottom: 1px solid #C7B7A4;
+  }
+
+  .card div .desc {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    color: #595959;
+  }
+
+  footer {
+    background-color: #732020;
+    padding: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer div {
+    font-size: 1.25rem;
+    color: #F2F2F2;
+  }
+
+  @media screen and (max-width: 600px) {}
+</style>
+
+<body>
+  <nav>
+    <div class="nav-title">Birthday Card
+      <i class="fa-solid fa-heart"></i>
+    </div>
+  </nav>
+  <main>
+    <div class="banner">
+      <img class="background" src="https://i.imgur.com/ym9CMVZ.jpg" alt="">
+      <img class="avatar" src="https://i.imgur.com/6eSOGMK.jpg" alt="">
+    </div>
+    <div class="letter">
+      <p>
+        　　恭喜寶貝又經歷了一年的生日。今年也是發生了不少事，我們也經歷了很多過程，甚至我也離開了工作，而寶貝依然支持我，是我很感謝的事情。
+      </p>
+      <p>
+        　　新的一年依然是希望寶貝能愛護身體，對於工作也別太免強。自從我離開職場之後常常會思考工作對於人生是什麼?
+        如果寶貝有機會可以多想想這問題，或許會有比較好的答案。把堅強變成勉強，可能失去了健康，也可能失去了情緒控管，甚至更多。　我在這段求學期間有更深刻的了解人生的三個模式，舒適﹑挑戰﹑恐慌，這三個模式都是好的，舒適久了就去挑戰，挑戰到後來可能開始恐慌。而踏入到恐慌會進入一個更未知的狀態，他能帶來更多的成長，但也要開始關注能負荷多少。　簡單的來說我們要拿起我們能拿起的，拿不起的，還是可以拿，但也要學會放下。
+      </p>
+      <p>
+        最後依然希望寶貝在新的一歲可以平安度過，困難和不順遂一定會有，但記得一切都是過程，一切都是體會而已。　我們繼續牽著手，再去多體會人生的過程，我會繼續看著寶貝走過日子，走向理想。
+      </p>
+    </div>
+    <div class="card-group">
+      <ul>
+        <!-- render -->
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      <i class="fa-solid fa-gift"></i>
+      Happy Birthday to Emily -- 2023
+    </div>
+  </footer>
+</body>
+
+<script>
+  const cardData = [
+    {
+      name: '小王子',
+      desc: '親愛的朋友，願你的生活充滿星光，保持純真，尋找愛，保持童心，享受旅程。',
+      avatar: 'https://i.imgur.com/uT3rHIk.png'
+    },
+    {
+      name: 'Chimmy',
+      desc: '生日快樂！Chimmy希望你充滿笑容和快樂，每天都像是生日一樣開心！',
+      avatar: 'https://i.imgur.com/bivuU7U.png'
+    },
+    {
+      name: '卡爾爺爺 & 艾莉奶奶',
+      desc: '親愛的朋友，歲月如梭，讓我用心底的祝願送給你。願你的生命像一部美麗的故事，充滿情感和奇蹟。願你在每個日出和日落中都找到幸福的意義，就像我在星際中尋找著生命的奧秘一樣。生日快樂，願你的人生充滿溫情和回憶，像是這部令人驚嘆的電影一樣。',
+      avatar: 'https://i.imgur.com/ig17ij7.jpg'
+    },
+    {
+      name: '荻野千尋',
+      desc: 'お誕生日おめでとうございます！あなたの人生が、私の神隠しの冒険のように、驚きと不思議に満ちたものでありますように。私が両親を探す旅のように、あなたも自分の目標と幸福を見つけられますように。未来がどんなものであれ、どうか勇気を持って前に進んでください。すべての人生は不思議な旅です。お誕生日おめでとうございます。魔法と幸福に溢れた人生でありますように！(生日快樂！願你的生命充满冒险和不可思議的經歷，就像我的神隱之旅一樣。希望你勇敢面对一切，生活充满魔法和幸福！)',
+      avatar: 'https://i.imgur.com/o1a4kLI.png'
+    },
+    {
+      name: '毛怪 & 大眼仔',
+      desc: '恭喜生日，希望你的生活充满笑聲和怪趣！',
+      avatar: 'https://i.imgur.com/IWVZfe1.png'
+    },
+    {
+      name: '史迪奇',
+      desc: 'Yue-er de pao-xiao!!! (翻譯君:放棄)',
+      avatar: 'https://i.imgur.com/StpIHea.png'
+    }
+  ]
+
+  // 获取ul元素
+  const cardList = document.querySelector('.card-group ul');
+
+  // 随机排序cardData数组
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  const shuffledCardData = shuffleArray(cardData);
+
+  // 循环遍历shuffledCardData数组，创建并插入<li>元素
+  shuffledCardData.forEach(data => {
+    const cardItem = document.createElement('li');
+    cardItem.classList.add('card');
+
+    // 创建并设置<img>元素
+    const img = document.createElement('img');
+    img.src = data.avatar;
+    img.alt = '';
+
+    // 创建<div>元素，包含姓名和描述
+    const cardContent = document.createElement('div');
+
+    const name = document.createElement('p');
+    name.classList.add('name');
+    name.textContent = data.name;
+
+    const desc = document.createElement('p');
+    desc.classList.add('desc');
+    desc.textContent = data.desc;
+
+    // 将<img>和<div>添加到<li>中
+    cardContent.appendChild(name);
+    cardContent.appendChild(desc);
+
+    cardItem.appendChild(img);
+    cardItem.appendChild(cardContent);
+
+    // 将<li>添加到<ul>中
+    cardList.appendChild(cardItem);
+  });
+
+
+</script>
+
+</html>
