@@ -21,6 +21,21 @@
     background-color: #FFDAE9;
   }
 
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: 0;
+    margin: 0;
+  }
+
+  main {
+    max-width: 1400px;
+  }
+
   nav {
     display: flex;
     justify-content: center;
@@ -59,12 +74,17 @@
     object-fit: cover;
     object-position: center top;
     border-radius: 50%;
-    border: 0.5rem solid #F2F2F2;
+    border: 0.5rem solid #DAAC97;
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 5px 10px #BDA2A4;
+    cursor: pointer;
+  }
+
+  .banner .avatar:hover {
+    box-shadow: 0 5px 20px #987e80;
   }
 
   .letter {
@@ -124,12 +144,47 @@
     color: #595959;
   }
 
+  .photo-group {
+    background-color: #F2F2F2;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px #BDA2A4;
+  }
+
+  .photo div {
+    padding: 1rem 1rem 0 1rem;
+    position: relative;
+  }
+
+  .photo div p {
+    margin: 0 1rem;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    position: absolute;
+    color: rgb(77, 40, 33);
+    top: 1px;
+    border-bottom: 2px solid #BDA2A4;
+    background-color: rgba(217, 216, 215, 0.7);
+    border-radius: 5px;
+  }
+
+
+  .photo-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
   footer {
     background-color: #732020;
     padding: 1.5rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 0.5rem solid #451111;
   }
 
   footer div {
@@ -137,7 +192,54 @@
     color: #F2F2F2;
   }
 
-  @media screen and (max-width: 600px) {}
+  /* modal 隱藏，並設置覆蓋整個頁面 */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  /* modal 內容樣式 */
+  .modal-content {
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-content .avatar {
+    max-width: 400px;
+  }
+
+  /* 關閉按鈕樣式 */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+
+  @media screen and (min-width: 720px) {
+    .banner .avatar {
+      width: 25%;
+      top: 80%;
+      left: 15%;
+    }
+
+    .letter {
+      margin-top: 1rem;
+    }
+  }
 </style>
 
 <body>
@@ -146,10 +248,11 @@
       <i class="fa-solid fa-heart"></i>
     </div>
   </nav>
+
   <main>
     <div class="banner">
       <img class="background" src="https://i.imgur.com/ym9CMVZ.jpg" alt="">
-      <img class="avatar" src="https://i.imgur.com/6eSOGMK.jpg" alt="">
+      <img class="avatar" id="avatar" src="https://i.imgur.com/6eSOGMK.jpg" alt="">
     </div>
     <div class="letter">
       <p>
@@ -168,6 +271,89 @@
         <!-- render -->
       </ul>
     </div>
+
+    <div class="photo-group">
+      <ul class="photos">
+        <li class="photo">
+          <div>
+            <p>2022/09 新竹-綠世界</p>
+            <img class="photo-img" src="https://i.imgur.com/J45vU3c.jpg" alt="">
+          </div>
+        </li>
+        <li class="photo">
+          <div>
+            <p>2022/10 北投</p>
+            <img class="photo-img" src="https://i.imgur.com/52sI6GX.jpg" alt="">
+          </div>
+        </li>
+        <li class="photo">
+          <div>
+            <p>2022/11 基隆</p>
+            <img class="photo-img" src="https://i.imgur.com/ZZgxkkR.jpg" alt="">
+          </div>
+        </li>
+        <li class="photo">
+          <div>
+            <p>2022/12 淡水</p>
+            <img class="photo-img" src="https://i.imgur.com/Z5BzSje.jpg" alt="">
+          </div>
+        </li>
+        <li class="photo">
+          <div>
+            <p>2022/12 彰化</p>
+            <img class="photo-img" src="https://i.imgur.com/kFI9Dml.jpg" alt="">
+          </div>
+        </li>
+        <li class="photo">
+          <div>
+            <p>2023/02 陽明山</p>
+            <img class="photo-img" src="https://i.imgur.com/j124TsW.jpg" alt="">
+          </div>
+        </li>
+        <li class="photo">
+          <div>
+            <p>2023/03 鈴芽之旅</p>
+            <img class="photo-img" src="https://i.imgur.com/oOwUH1q.jpg" alt="">
+          </div>
+        </li>
+        <li class="photo">
+          <div>
+            <p>2023/04 烏來</p>
+            <img class="photo-img" src="https://i.imgur.com/9jRGekm.jpg" alt="">
+          </div>
+        </li>
+        <li class="photo">
+          <div>
+            <p>2023/05 宜蘭</p>
+            <img class="photo-img" src="https://i.imgur.com/D3rSgvZ.jpg" alt="">
+          </div>
+        </li>
+        <li class="photo">
+          <div>
+            <p>2023/05 桃園神社</p>
+            <img class="photo-img" src="https://i.imgur.com/kEUr4FT.jpg" alt="">
+          </div>
+        </li>
+        <li class="photo">
+          <div>
+            <p>2023/07 林語堂故居</p>
+            <img class="photo-img" src="https://i.imgur.com/B0toUja.jpg" alt="">
+          </div>
+        </li>
+        <li class="photo">
+          <div>
+            <p>2023/08 小王子10週年</p>
+            <img class="photo-img" src="https://i.imgur.com/iqYpZNe.jpg" alt="">
+          </div>
+        </li>
+        <li class="photo">
+          <div>
+            <p>2023/08 鶯歌</p>
+            <img class="photo-img" src="https://i.imgur.com/MgT74zC.jpg" alt="">
+          </div>
+        </li>
+      </ul>
+    </div>
   </main>
 
   <footer>
@@ -176,6 +362,13 @@
       Happy Birthday to Emily -- 2023
     </div>
   </footer>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img class="avatar" id="avatar" src="https://i.imgur.com/6eSOGMK.jpg" alt="">
+    </div>
+  </div>
 </body>
 
 <script>
@@ -209,6 +402,51 @@
       name: '史迪奇',
       desc: 'Yue-er de pao-xiao!!! (翻譯君:放棄)',
       avatar: 'https://i.imgur.com/StpIHea.png'
+    },
+    {
+      name: '妃妃',
+      desc: '(....)',
+      avatar: 'https://i.imgur.com/ZBVzCNk.jpg'
+    },
+    {
+      name: '球球',
+      desc: '喵~',
+      avatar: 'https://i.imgur.com/dfAzTMJ.jpg'
+    },
+    {
+      name: '橘子',
+      desc: '(已躲起來)',
+      avatar: 'https://i.imgur.com/ECXm14E.jpg'
+    },
+    {
+      name: '糖糖',
+      desc: '喵喵~喵~',
+      avatar: 'https://i.imgur.com/fjC02x4.jpg'
+    },
+    {
+      name: '阿醜',
+      desc: '喵喵!!!喵~喵!!!喵喵喵~',
+      avatar: 'https://i.imgur.com/v6OeBXM.jpg'
+    },
+    {
+      name: '蔡蔡',
+      desc: "穎卿～好久好久不見啦。</br>想當初我們還一起在路上聊著未來，雖然我們沒有在一起工作了，但一樣都是為了未來在努力向前進，而我也會一直為你加油喲，謝謝有妳和師父、在我很辛苦低潮的時候都能給予幫助和陪伴，也很開心妳和師父甜甜蜜蜜的在一起、之後就等妳的炸彈，準備帶球球一起祝福你們喲😂</br> 祝妳生日快樂、開開心心的！",
+      avatar: 'https://i.imgur.com/R0IozlV.jpg'
+    },
+    {
+      name: '哲誌',
+      desc: "麻吉～～～生日快樂，雖然現在不能一起努力+成長，但我們心是同在的you know，等你的紅色炸彈😉妳和師父甜甜蜜蜜的在一起、之後就等妳的炸彈，準備帶球球一起祝福你們喲😂　 祝妳生日快樂、開開心心的！",
+      avatar: 'https://i.imgur.com/FUerPDO.png'
+    },
+    {
+      name: '孟琳',
+      desc: `穎卿親辜^ - ^祝妳永遠的25歲生日快樂🤣</br>工作上是個強力後盾，生活上是個多才多藝的人，同時也是我們的旅遊團導遊，偶爾還會當當開心果，說些有趣的話，讓氣氛很歡樂！</br>果然是協理尾牙的主持人、一日遊的活動長的首選😆😆😆（誤）</br>不管在職場或是職場之外，都很開心有妳陪伴😃正能量的思想以及許多生活上的事情，都是值得我學習的地方！</br>希望妳每天都能健康快樂！`,
+      avatar: 'https://i.imgur.com/sN5Yf8k.jpg'
+    },
+    {
+      name: '于涵',
+      desc: '穎卿生日快樂～～</br>謝謝你一直很照顧我！</br>忙碌工作的時候也要好好照顧自己</br>希望你感冒趕快好！多休息😪</br> By 于涵',
+      avatar: 'https://i.imgur.com/12pFzYG.jpg'
     }
   ]
 
@@ -223,40 +461,45 @@
     }
     return array;
   }
-
   const shuffledCardData = shuffleArray(cardData);
 
-  // 循环遍历shuffledCardData数组，创建并插入<li>元素
   shuffledCardData.forEach(data => {
     const cardItem = document.createElement('li');
     cardItem.classList.add('card');
 
-    // 创建并设置<img>元素
-    const img = document.createElement('img');
-    img.src = data.avatar;
-    img.alt = '';
-
-    // 创建<div>元素，包含姓名和描述
-    const cardContent = document.createElement('div');
-
-    const name = document.createElement('p');
-    name.classList.add('name');
-    name.textContent = data.name;
-
-    const desc = document.createElement('p');
-    desc.classList.add('desc');
-    desc.textContent = data.desc;
-
-    // 将<img>和<div>添加到<li>中
-    cardContent.appendChild(name);
-    cardContent.appendChild(desc);
-
-    cardItem.appendChild(img);
-    cardItem.appendChild(cardContent);
-
-    // 将<li>添加到<ul>中
+    cardItem.innerHTML = `
+      <img src="${data.avatar}">
+      <div>
+        <p class="name">${data.name}</p>
+        <p class="desc">${data.desc}</p>
+      </div>
+    `
     cardList.appendChild(cardItem);
   });
+
+
+  // 獲取 modal 和觸發 modal 的按鈕
+  var modal = document.getElementById('myModal');
+  var avatar = document.getElementById('avatar');
+  var closeBtn = document.getElementsByClassName('close')[0];
+
+  // 點擊按鈕時顯示 modal
+  avatar.onclick = function () {
+    modal.style.display = 'block';
+  }
+
+  // 點擊關閉按鈕時隱藏 modal
+  closeBtn.onclick = function () {
+    modal.style.display = 'none';
+  }
+
+  // 點擊 modal 外部區域時隱藏 modal
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
+
 
 
 </script>
