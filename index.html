@@ -106,7 +106,8 @@
     margin: 3rem 0;
   }
 
-  .card {
+  .card,
+  .special-card {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -114,6 +115,27 @@
     border-radius: 10px;
     box-shadow: 0 5px 10px #BDA2A4;
     margin: 0.5rem 0;
+  }
+
+  .special-card-top {
+    display: flex;
+    width: 75%;
+    margin-right: 0.5rem;
+  }
+
+  .special-card-top img {
+    width: 55%;
+    max-width: 220px;
+    height: 55%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin: 0.5rem;
+    border-radius: 20px;
+    border: 2px solid #E24D7B;
+  }
+
+  .special-card .photo {
+    padding: 0.5rem;
   }
 
   .card img {
@@ -131,7 +153,8 @@
     margin: 0 0.5rem;
   }
 
-  .card div .name {
+  .card div .name,
+  .special-card-top .name {
     margin: 1rem 0;
     font-size: 1.5rem;
     font-weight: 700;
@@ -231,6 +254,27 @@
   }
 
 
+  @media screen and (max-width: 720px) {
+    .special-card {
+      display: block;
+      width: 100%;
+      /* 在這裡添加其他相關的樣式變更 */
+    }
+
+    .special-card-top {
+      width: 100%;
+    }
+
+    .special-card-top .name,
+    .special-card-top .desc {
+      margin-right: 0.5rem;
+    }
+
+    .special-card .photo img {
+      width: 100%;
+    }
+  }
+
   @media screen and (min-width: 720px) {
     .banner .avatar {
       width: 25%;
@@ -241,6 +285,7 @@
     .letter {
       margin-top: 1rem;
     }
+
   }
 </style>
 
@@ -271,6 +316,21 @@
     <div class="card-group">
       <ul>
         <!-- render -->
+        <li class="special-card">
+          <div class="special-card-top">
+            <img src="https://i.imgur.com/FUerPDO.png">
+            <div>
+              <p class="name">𝓢𝓱𝓪𝓷𝓷𝓸𝓷 🥨</p>
+              <p class="desc">Happy birthday to my lovely girl! You’re one of the sweetest person i’ve ever met, cheers
+                to
+                more fun, more memories and
+                holiday together. May all your birthday wishes come true, love you many many xx</p>
+            </div>
+          </div>
+          <div class="photo">
+            <img src="https://i.imgur.com/BxCExOr.jpg" alt="">
+          </div>
+        </li>
       </ul>
     </div>
 
@@ -459,6 +519,11 @@
       name: '品瑄',
       desc: '願在你未知的未來，有我雪片般的祝福，</br>一祝你身體健康；</br>二祝你幸福快樂；</br>三祝你萬事如意。</br>生日快樂。',
       avatar: 'https://i.imgur.com/FUerPDO.png'
+    },
+    {
+      name: '亞柔',
+      desc: 'Hi 穎卿，我是亞柔，在這特別的日子裡，想跟你說，你是一位優秀且出色的好夥伴，很感謝你在工作上的幫助和支援，真的很幸運有你在身邊！希望你的生日充滿歡樂和驚喜，祝福你身體健康，生日快樂！</br>Have a wonderful day!',
+      avatar: 'https://i.imgur.com/ycNM5au.jpg'
     }
 
   ]
