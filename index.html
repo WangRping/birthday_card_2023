@@ -265,9 +265,27 @@
       width: 100%;
     }
 
+    .special-card-top img {
+      width: 20%;
+    }
+
     .special-card-top .name,
     .special-card-top .desc {
       margin-right: 0.5rem;
+    }
+
+    .special-card-top .desc {
+      margin-bottom: 0;
+    }
+
+    .special-card .photo::before {
+      content: "";
+      display: block;
+      width: 100%;
+      /* 调整这个值以设置线的宽度 */
+      border-top: 1px solid #C7B7A4;
+      margin: 0.5rem auto;
+      /* 居中线条 */
     }
 
     .special-card .photo img {
