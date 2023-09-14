@@ -18,7 +18,39 @@
 
   body {
     margin: 0;
+    padding: 0;
     background-color: #FFDAE9;
+    position: relative;
+  }
+
+  .decrypt-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: rgb(229, 223, 223, 0.5);
+    border-radius: 10px;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  .decrypt-container .decrypt-input {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 2rem;
+    border: none;
+    type="number"
+  }
+
+  .decrypt-container .decrypt-button {
+    border: none;
+    height: 2rem;
+    width: 3rem;
+    cursor: pointer;
   }
 
   ul {
@@ -30,6 +62,10 @@
   li {
     padding: 0;
     margin: 0;
+  }
+
+  .container {
+    filter: blur(1rem)
   }
 
   main {
@@ -293,140 +329,147 @@
 </style>
 
 <body>
-  <nav>
-    <div class="nav-title">Birthday Card
-      <i class="fa-solid fa-heart"></i>
-    </div>
-  </nav>
+  <div class="decrypt-container">
+    <input class="decrypt-input" type="password" name="" id="">
+    <button class="decrypt-button">確定</button>
+  </div>
 
-  <main>
-    <div class="banner">
-      <img class="background" src="https://i.imgur.com/ym9CMVZ.jpg" alt="">
-      <img class="avatar" id="avatar" src="https://i.imgur.com/6eSOGMK.jpg" alt="">
-    </div>
-    <div class="letter">
-      <p>
-        　　恭喜寶貝又經歷了一年的生日。今年也是發生了不少事，我們也經歷了很多過程，甚至我也離開了工作，而寶貝依然支持我，是我很感謝的事情。
-      </p>
-      <p>
-        　　新的一年依然是希望寶貝能愛護身體，對於工作也別太免強。自從我離開職場之後常常會思考工作對於人生是什麼?
-        如果寶貝有機會可以多想想這問題，或許會有比較好的答案。把堅強變成勉強，可能失去了健康，也可能失去了情緒控管，甚至更多。　我在這段求學期間有更深刻的了解人生的三個模式，舒適﹑挑戰﹑恐慌，這三個模式都是好的，舒適久了就去挑戰，挑戰到後來可能開始恐慌。而踏入到恐慌會進入一個更未知的狀態，他能帶來更多的成長，但也要開始關注能負荷多少。　簡單的來說我們要拿起我們能拿起的，拿不起的，還是可以拿，但也要學會放下。
-      </p>
-      <p>
-        最後依然希望寶貝在新的一歲可以平安度過，困難和不順遂一定會有，但記得一切都是過程，一切都是體會而已。　我們繼續牽著手，再去多體會人生的過程，我會繼續看著寶貝走過日子，走向理想。
-      </p>
-    </div>
-    <div class="card-group">
-      <ul>
-        <!-- render -->
-        <li class="special-card">
-          <div class="special-card-top">
-            <div>
-              <p class="name">𝓢𝓱𝓪𝓷𝓷𝓸𝓷 🥨</p>
-              <p class="desc">Happy birthday to my lovely girl! You’re one of the sweetest person i’ve ever met, cheers
-                to
-                more fun, more memories and
-                holiday together. May all your birthday wishes come true, love you many many xx</p>
+  <div class="container">
+    <nav>
+      <div class="nav-title">Birthday Card
+        <i class="fa-solid fa-heart"></i>
+      </div>
+    </nav>
+
+    <main>
+      <div class="banner">
+        <img class="background" src="https://i.imgur.com/ym9CMVZ.jpg" alt="">
+        <img class="avatar" id="avatar" src="https://i.imgur.com/6eSOGMK.jpg" alt="">
+      </div>
+      <div class="letter">
+        <p>
+          　　恭喜寶貝又經歷了一年的生日。今年也是發生了不少事，我們也經歷了很多過程，甚至我也離開了工作，而寶貝依然支持我，是我很感謝的事情。
+        </p>
+        <p>
+          　　新的一年依然是希望寶貝能愛護身體，對於工作也別太免強。自從我離開職場之後常常會思考工作對於人生是什麼?
+          如果寶貝有機會可以多想想這問題，或許會有比較好的答案。把堅強變成勉強，可能失去了健康，也可能失去了情緒控管，甚至更多。　我在這段求學期間有更深刻的了解人生的三個模式，舒適﹑挑戰﹑恐慌，這三個模式都是好的，舒適久了就去挑戰，挑戰到後來可能開始恐慌。而踏入到恐慌會進入一個更未知的狀態，他能帶來更多的成長，但也要開始關注能負荷多少。　簡單的來說我們要拿起我們能拿起的，拿不起的，還是可以拿，但也要學會放下。
+        </p>
+        <p>
+          最後依然希望寶貝在新的一歲可以平安度過，困難和不順遂一定會有，但記得一切都是過程，一切都是體會而已。　我們繼續牽著手，再去多體會人生的過程，我會繼續看著寶貝走過日子，走向理想。
+        </p>
+      </div>
+      <div class="card-group">
+        <ul>
+          <!-- render -->
+          <li class="special-card">
+            <div class="special-card-top">
+              <div>
+                <p class="name">𝓢𝓱𝓪𝓷𝓷𝓸𝓷 🥨</p>
+                <p class="desc">Happy birthday to my lovely girl! You’re one of the sweetest person i’ve ever met,
+                  cheers
+                  to
+                  more fun, more memories and
+                  holiday together. May all your birthday wishes come true, love you many many xx</p>
+              </div>
             </div>
-          </div>
-          <div class="photo">
-            <img src="https://i.imgur.com/BxCExOr.jpg" alt="">
-          </div>
-        </li>
-      </ul>
-    </div>
+            <div class="photo">
+              <img src="https://i.imgur.com/BxCExOr.jpg" alt="">
+            </div>
+          </li>
+        </ul>
+      </div>
 
-    <div class="photo-group">
-      <ul class="photos">
-        <li class="photo">
-          <div>
-            <p>2022/09 新竹-綠世界</p>
-            <img class="photo-img" src="https://i.imgur.com/J45vU3c.jpg" alt="">
-          </div>
-        </li>
-        <li class="photo">
-          <div>
-            <p>2022/10 北投</p>
-            <img class="photo-img" src="https://i.imgur.com/52sI6GX.jpg" alt="">
-          </div>
-        </li>
-        <li class="photo">
-          <div>
-            <p>2022/11 基隆</p>
-            <img class="photo-img" src="https://i.imgur.com/ZZgxkkR.jpg" alt="">
-          </div>
-        </li>
-        <li class="photo">
-          <div>
-            <p>2022/12 淡水</p>
-            <img class="photo-img" src="https://i.imgur.com/Z5BzSje.jpg" alt="">
-          </div>
-        </li>
-        <li class="photo">
-          <div>
-            <p>2022/12 彰化</p>
-            <img class="photo-img" src="https://i.imgur.com/kFI9Dml.jpg" alt="">
-          </div>
-        </li>
-        <li class="photo">
-          <div>
-            <p>2023/02 陽明山</p>
-            <img class="photo-img" src="https://i.imgur.com/j124TsW.jpg" alt="">
-          </div>
-        </li>
-        <li class="photo">
-          <div>
-            <p>2023/03 鈴芽之旅</p>
-            <img class="photo-img" src="https://i.imgur.com/oOwUH1q.jpg" alt="">
-          </div>
-        </li>
-        <li class="photo">
-          <div>
-            <p>2023/04 烏來</p>
-            <img class="photo-img" src="https://i.imgur.com/9jRGekm.jpg" alt="">
-          </div>
-        </li>
-        <li class="photo">
-          <div>
-            <p>2023/05 宜蘭</p>
-            <img class="photo-img" src="https://i.imgur.com/D3rSgvZ.jpg" alt="">
-          </div>
-        </li>
-        <li class="photo">
-          <div>
-            <p>2023/05 桃園神社</p>
-            <img class="photo-img" src="https://i.imgur.com/kEUr4FT.jpg" alt="">
-          </div>
-        </li>
-        <li class="photo">
-          <div>
-            <p>2023/07 林語堂故居</p>
-            <img class="photo-img" src="https://i.imgur.com/B0toUja.jpg" alt="">
-          </div>
-        </li>
-        <li class="photo">
-          <div>
-            <p>2023/08 小王子10週年</p>
-            <img class="photo-img" src="https://i.imgur.com/iqYpZNe.jpg" alt="">
-          </div>
-        </li>
-        <li class="photo">
-          <div>
-            <p>2023/08 鶯歌</p>
-            <img class="photo-img" src="https://i.imgur.com/MgT74zC.jpg" alt="">
-          </div>
-        </li>
-      </ul>
-    </div>
-  </main>
+      <div class="photo-group">
+        <ul class="photos">
+          <li class="photo">
+            <div>
+              <p>2022/09 新竹-綠世界</p>
+              <img class="photo-img" src="https://i.imgur.com/J45vU3c.jpg" alt="">
+            </div>
+          </li>
+          <li class="photo">
+            <div>
+              <p>2022/10 北投</p>
+              <img class="photo-img" src="https://i.imgur.com/52sI6GX.jpg" alt="">
+            </div>
+          </li>
+          <li class="photo">
+            <div>
+              <p>2022/11 基隆</p>
+              <img class="photo-img" src="https://i.imgur.com/ZZgxkkR.jpg" alt="">
+            </div>
+          </li>
+          <li class="photo">
+            <div>
+              <p>2022/12 淡水</p>
+              <img class="photo-img" src="https://i.imgur.com/Z5BzSje.jpg" alt="">
+            </div>
+          </li>
+          <li class="photo">
+            <div>
+              <p>2022/12 彰化</p>
+              <img class="photo-img" src="https://i.imgur.com/kFI9Dml.jpg" alt="">
+            </div>
+          </li>
+          <li class="photo">
+            <div>
+              <p>2023/02 陽明山</p>
+              <img class="photo-img" src="https://i.imgur.com/j124TsW.jpg" alt="">
+            </div>
+          </li>
+          <li class="photo">
+            <div>
+              <p>2023/03 鈴芽之旅</p>
+              <img class="photo-img" src="https://i.imgur.com/oOwUH1q.jpg" alt="">
+            </div>
+          </li>
+          <li class="photo">
+            <div>
+              <p>2023/04 烏來</p>
+              <img class="photo-img" src="https://i.imgur.com/9jRGekm.jpg" alt="">
+            </div>
+          </li>
+          <li class="photo">
+            <div>
+              <p>2023/05 宜蘭</p>
+              <img class="photo-img" src="https://i.imgur.com/D3rSgvZ.jpg" alt="">
+            </div>
+          </li>
+          <li class="photo">
+            <div>
+              <p>2023/05 桃園神社</p>
+              <img class="photo-img" src="https://i.imgur.com/kEUr4FT.jpg" alt="">
+            </div>
+          </li>
+          <li class="photo">
+            <div>
+              <p>2023/07 林語堂故居</p>
+              <img class="photo-img" src="https://i.imgur.com/B0toUja.jpg" alt="">
+            </div>
+          </li>
+          <li class="photo">
+            <div>
+              <p>2023/08 小王子10週年</p>
+              <img class="photo-img" src="https://i.imgur.com/iqYpZNe.jpg" alt="">
+            </div>
+          </li>
+          <li class="photo">
+            <div>
+              <p>2023/08 鶯歌</p>
+              <img class="photo-img" src="https://i.imgur.com/MgT74zC.jpg" alt="">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
 
-  <footer>
-    <div>
-      <i class="fa-solid fa-gift"></i>
-      Happy Birthday to Emily -- 2023
-    </div>
-  </footer>
-
+    <footer>
+      <div>
+        <i class="fa-solid fa-gift"></i>
+        Happy Birthday to Emily -- 2023
+      </div>
+    </footer>
+  </div>
   <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -499,7 +542,7 @@
     },
     {
       name: '哲誌',
-      desc: "麻吉～～～生日快樂，雖然現在不能一起努力+成長，但我們心是同在的you know，等你的紅色炸彈😉妳和師父甜甜蜜蜜的在一起、之後就等妳的炸彈，準備帶球球一起祝福你們喲😂　 祝妳生日快樂、開開心心的！",
+      desc: "麻吉～～～生日快樂，雖然現在不能一起努力+成長，但我們心是同在的you know，等你的紅色炸彈😉",
       avatar: 'https://i.imgur.com/FUerPDO.png'
     },
     {
@@ -580,6 +623,28 @@
     }
   }
 
+  const decryptContainer = document.querySelector('.decrypt-container')
+  const decryptInput = document.querySelector('.decrypt-input')
+
+  function clickDecrypt(e) {
+    if (e.target.className === 'decrypt-button') {
+      if (document.querySelector('.decrypt-input').value === '09130115') {
+        document.querySelector('.container').style.filter = 'blur(0)'
+        decryptContainer.remove()
+      }
+    }
+  }
+  function keyupDecrypt(e) {
+    if (e.key === 'Enter') {
+      if (e.target.value === '09130115') {
+        document.querySelector('.container').style.filter = 'blur(0)'
+        decryptContainer.remove()
+      }
+    }
+  }
+
+  decryptContainer.addEventListener('click', clickDecrypt)
+  decryptInput.addEventListener('keyup', keyupDecrypt)
 
 
 </script>
